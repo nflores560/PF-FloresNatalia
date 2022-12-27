@@ -4,21 +4,16 @@
     box-sizing: border-box;
 }
 
-html{
-	height: 100%;
-}
-
 body {
-	background: #e9eCF4;
+	background: #f1beeb;
     font-family: open sans-serif;
 	display: flex;
-	flex-direction: column;
-	
+	flex-direction: column;	
 }
 
 .contenedor {
     width: 100%;
-    margin: 20px auto;
+    margin: auto;
 	display: grid;
 }
 
@@ -27,7 +22,7 @@ body {
 	height: 50px;
 	width: 100%;
 	background: #d33878;
-	color: #fff;
+	color: #f1beeb93;
 	grid-column-start: 1;
 	grid-column-end: 5;
 	justify-content: center center;
@@ -41,6 +36,7 @@ body {
 	display: inline;
 	font-size: 20px;
 	margin-bottom: 0px;
+	justify-content: center;
 }
 
 .navbar > a:hover{
@@ -49,7 +45,7 @@ body {
 
 /*portada*/
 .contenedor > main{
-	height: 400px;
+	height: 350px;
 	background: url(../img/PICADA2.webp);
 	background-size: cover;
     background-attachment: fixed;
@@ -93,208 +89,127 @@ main .textos-header{
 	margin-bottom: 0px;
 }
 
-
-/*carrousel*/
-
-
-
-/*pagina picadas*/
-
-h2{
-	font-size: 40px;
-	color: blueviolet;
-	align-items: center;
-	text-align: center;
-	margin-bottom: 40px;
-}
-
-fieldset{
-	text-align: center;
-	width: 150px;
-	height: 150px;
-	display: inline-block;
-	margin-left: auto;
-}
-
-img{
-	float: left; width: 15em; height: 15em; margin-right: 1em; 
-	align-items: center;
-	
-}
-
-
-ul li{
+.presentación > p{
 	font-size: 20px;
-	color: violet;
-	text-decoration: none;
-	list-style: none;
+	color: black;
 	text-align: center;
-	flex-direction: row;
+	margin-left: 50px;
+	margin-right: 50px;
+
 }
 
-p{
-	font-size: 10px;
+/*página de picadas*/
 
+.contenedor-picadas{
+	position: relative;
+	display: flex;
+	font-size: 15px;
+	height: auto;
+	width: auto;
+}
+
+.picadas{
+	position: relative;
+	display: flex;
+	height: 40vw;
+	justify-content: center;
+	margin-left: 100px;
 }
 
 /*página de bebidas*/
 
-h2{
-	font-size: 40px;
-	color: blueviolet;
+.container{
+	font-size: 20px;
 	align-items: center;
+	margin: 10px;
+	display: flex;
+	height: auto;
+	width: auto;
+}
+
+.bebidas{
+	position: relative;
+	display: flex;
+	height: 40vw;
+	justify-content: center;
+	margin-left: 100px;
+}
+
+.card{
+	align-items: flex-start;
+	background-color: #fff;
+	display: flex;
+	height: 50vh;
+	width: 50vh;
+	padding: 2em;
+	border-radius: 3px;
+	margin: 30px;
+	justify-content: center;
 	text-align: center;
-	margin-bottom: 40px;
 }
 
 img{
-	display: inline-block;
-	flex-direction: row;
-	justify-content: space-between;
-	float: left; width: 10em; height: 10em; margin-right: 1em; 
-	transform: translate(0, 0);
+	height: auto;
+	width: auto;
+	max-height: 150px;
+	max-width: 200px;
+	border-radius: 3px;
+	margin: 10px;
 }
-
-.Galeria-bebidas > div{
-	width: 100%;
-	justify-content: space-between;
-	text-align: left;
-	flex-direction: row;
-	align-content: space-around;
-	display: inline-block;
-}
-
-h3{
-	justify-content: space-between;
-	font-size: 20px;
-	color: violet;
-	align-items: center;
-	text-align: center;
-	flex-direction: row;
-	display: inline-block;
-}
-
-h3:hover{
-	text-decoration: underline;
-}
-
-
-.contenedor-bebida1 .imagen-bebida1 img{
-	clip-path: circle(50% at top right);
-	transition-property: clip-path;
-	transition-duration: 2s;
-}
-
-.imagen-bebida1 img:hover{
-clip-path: circle(150% at top right);
-}
-
-.contenedor-bebida2 .imagen-bebida2 img{
-	clip-path: circle(50% at top right);
-	transition-property: clip-path;
-	transition-duration: 2s;
-}
-
-.imagen-bebida2 img:hover{
-clip-path: circle(150% at top right);
-}
-
-.contenedor-bebida3 .imagen-bebida3 img{
-	clip-path: circle(50% at top right);
-	transition-property: clip-path;
-	transition-duration: 2s;
-}
-
-.imagen-bebida3 img:hover{
-clip-path: circle(150% at top right);
-}
-
 
 /*página de snacks y salsas*/
-.contenedorsalsas .Galeria-snacksysalsas{
-	justify-content: center;
-	display: inline;
-	flex-wrap: wrap;
 
+.snacksysalsas{
+	position: relative;
+	height: 30vw;
 }
 
-h2{
-	font-size: 40px;
-	color: blueviolet;
-	align-items: center;
-	text-align: center;
-	margin-bottom: 40px;
-}
-
-img{
+.contenedorsalsas{
+	position: relative;
 	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	float: left; width: 10em; height: 10em; margin-right: 1em; 
-	transform: translate(0, 0);
-	align-content: center;
-	padding: 20px;
-}
-
-.Galeria-snacksysalsas  nav{
-	width: 25%;
-	justify-content: space-between;
-	text-align: center;
-	display: inline-flex;
-	align-items: center;
-	background-image: linear-gradient(to left, violet, rgb(0, 247, 255));
-	flex-wrap: wrap;
-}
-
-.imagen-snacks {
-	position: relative;
-	overflow: 250px;
-	border-radius: 6px;
-	box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.50);
-	align-items: center;
-	justify-content: center;
-	min-width: 200px;
-	margin-bottom: 0px;
-}
-
-.imagen-salsas {
-	position: relative;
-	overflow: 250px;
-	border-radius: 6px;
-	box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.50);
-	align-items: center;
-	justify-content: center;
-	min-width: 200px;
-	margin-bottom: 0px;
-}
-
-h3{
-	justify-content: space-between;
 	font-size: 20px;
-	color: rgb(27, 3, 27);
+	height: auto;
+	width: auto;
+}
+
+.box{
+	height: auto;
+	width: auto;
 	align-items: center;
 	text-align: center;
-	flex-direction: row;
-	display: inline-block;
-	padding: 10px;	
-}
 
-h3:hover{
-	text-decoration: underline;
-}
 
+}
 
 /*página de contacto*/
+
 .form-contact{
-	margin: 0;
-	padding: 0;
-	width: 400px;
+	align-items: center;
+	height: 40vw;
+	margin-left: 300px;
+
+}
+.contact{
+	background-color: #fff;
+	width: 600px;
+	height: 350px;
 	position: relative;
 	border-style: solid;
 	box-shadow: 7px 13px 37px black;
 	text-align: center;
 	align-content: center;
 	align-items: center;
+}
+
+input{
+	width: 500px;
+	height: 30px;
+	margin-bottom: 2px;
+}
+
+textarea{
+	width: 500px;
+	height: 100px;
 }
 
 /*footer*/
@@ -307,8 +222,6 @@ footer{
 	height: 100px;
 	padding: 10px 0 30px 0;	
 }
-
-
 
 .contenedor-footer{
 	display: flex;
@@ -342,35 +255,4 @@ footer{
 	margin: 0 0 0 0;
 	color: black;
 	overflow: hidden;
-}
-
-@media  screen and (max-width: 768px) {
-	.contenedor .textos-header{
-		grid-column: 1/-1;
-	}
-	.contenedor .navbar{
-		grid-column: 1/-1;
-	}
-	.contenedor .widgets{
-		grid-column: 1/-1;
-	}
-	.contenedor .secciones{
-		grid-column: 1/-1;
-	}
-	.contenedor .content-foot{
-		grid-column: 1/-1;
-	}
-	.contenedor .form-contact{
-		grid-column: 1/-1;
-	}
-}
-
-@media screen and (max-widt: 900px){
-	header{
-		background-position: center;
-	}
-}
-
-.span ul li{
-	width: 44%;
 }
