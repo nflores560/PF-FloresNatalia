@@ -2,74 +2,68 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 body {
+	background: #f1beeb;
     font-family: open sans-serif;
-	flex-wrap: wrap;
-
-
+	display: flex;
+	flex-direction: column;	
 }
 
 .contenedor {
-    padding: 60px 0;
-    width: 90%;
-    max-width: 1000px;
+    width: 100%;
     margin: auto;
-    overflow: hidden;
-	min-width: 200px;
-	margin-bottom: 0px;
+	display: grid;
 }
 
-.logo {
-    color: #642a73;
-    font-size: 20px;
-    text-align: center;
-    margin-bottom: 60px;
-    align-content: space-between;
-    text-decoration: none;
-}
-
-/*header*/
-header {
+/*barra navegación-header*/
+.contenedor > header{
+	height: 50px;
 	width: 100%;
-    height: 600px;
-    background: url(../img/picadas.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    position: relative;
-	flex-wrap: wrap;
-
+	background: #d33878;
+	color: #f1beeb93;
+	grid-column-start: 1;
+	grid-column-end: 5;
+	justify-content: center center;
 }
 
-nav{
-	text-align: right;
-	padding: 30px 50px 0 0;
-	display: inline;
-	flex-wrap: wrap;
-
-}
-
-
-nav > a{
+.navbar > a{
 	color: white;
 	font-weight: 300;
 	text-decoration: none;
 	margin-right: 10px;
 	display: inline;
 	font-size: 20px;
-	min-width: 200px;
 	margin-bottom: 0px;
+	justify-content: center;
 }
 
-nav > a:hover{
+.navbar > a:hover{
 	text-decoration: underline;
 }
 
-header .textos-header{
+/*portada*/
+.contenedor > main{
+	height: 350px;
+	background: url(../img/PICADA2.webp);
+	background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+	flex-wrap: wrap;
+	grid-column-start: 1;
+	grid-column-end: 5;
+}
+
+.wave{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+main .textos-header{
 	display: flex;
-	height: 430px;
+	height: 230px;
 	width: 100%;
 	align-items: center;
 	justify-content: center;
@@ -83,10 +77,8 @@ header .textos-header{
 	color: rgb(63, 30, 30);
 	text-shadow: 3px 3px 0 #fff;
 	flex-wrap: wrap;
-	min-width: 200px;
 	margin-bottom: 0px;
 }
-
 
 .textos-header h2{
 	font-size: 30px;
@@ -94,68 +86,141 @@ header .textos-header{
 	color: rgb(63, 30, 30);
 	text-shadow: 3px 3px 0 #fff;
 	flex-wrap: wrap;
-	min-width: 200px;
 	margin-bottom: 0px;
-	
 }
 
+.presentación > p{
+	font-size: 20px;
+	color: black;
+	text-align: center;
+	margin-left: 50px;
+	margin-right: 50px;
 
-.wave{
-	position: absolute;
-	bottom: 0;
-	width: 100%;
 }
 
-/*main*/
+/*página de picadas*/
 
-h2{
-	font-size: 40px;
-	color: blueviolet;
+.contenedor-picadas{
+	position: relative;
+	display: flex;
+	font-size: 15px;
+	height: auto;
+	width: auto;
+}
+
+.picadas{
+	position: relative;
+	display: flex;
+	height: 40vw;
+	justify-content: center;
+	margin-left: 100px;
+}
+
+/*página de bebidas*/
+
+.container{
+	font-size: 20px;
 	align-items: center;
-	text-align: center;
-	margin-bottom: 40px;
+	margin: 10px;
+	display: flex;
+	height: auto;
+	width: auto;
 }
 
-fieldset{
+.bebidas{
+	position: relative;
+	display: flex;
+	height: 40vw;
+	justify-content: center;
+	margin-left: 100px;
+}
+
+.card{
+	align-items: flex-start;
+	background-color: #fff;
+	display: flex;
+	height: 50vh;
+	width: 50vh;
+	padding: 2em;
+	border-radius: 3px;
+	margin: 30px;
+	justify-content: center;
 	text-align: center;
-	width: 150px;
-	height: 150px;
-	display: inline-block;
-	margin-left: auto;
 }
 
 img{
-	float: left; width: 15em; height: 15em; margin-right: 1em; 
-	align-items: center;
-	
+	height: auto;
+	width: auto;
+	max-height: 150px;
+	max-width: 200px;
+	border-radius: 3px;
+	margin: 10px;
 }
 
+/*página de snacks y salsas*/
 
-ul li{
+.snacksysalsas{
+	position: relative;
+	height: 30vw;
+}
+
+.contenedorsalsas{
+	position: relative;
+	display: flex;
 	font-size: 20px;
-	color: violet;
-	text-decoration: none;
-	list-style: none;
-	text-align: center;
-	flex-direction: row;
+	height: auto;
+	width: auto;
 }
 
-p{
-	font-size: 10px;
+.box{
+	height: auto;
+	width: auto;
+	align-items: center;
+	text-align: center;
 
+
+}
+
+/*página de contacto*/
+
+.form-contact{
+	align-items: center;
+	height: 40vw;
+	margin-left: 300px;
+
+}
+.contact{
+	background-color: #fff;
+	width: 600px;
+	height: 350px;
+	position: relative;
+	border-style: solid;
+	box-shadow: 7px 13px 37px black;
+	text-align: center;
+	align-content: center;
+	align-items: center;
+}
+
+input{
+	width: 500px;
+	height: 30px;
+	margin-bottom: 2px;
+}
+
+textarea{
+	width: 500px;
+	height: 100px;
 }
 
 /*footer*/
-
 footer{
+	margin-top: auto;
+	position: fixed;
+	bottom: 0;
 	background: coral;
-	padding: 10px 0 30px 0;
-	margin: auto;
-	overflow: hidden;
 	width: 100%;
 	height: 100px;
-	margin-top: 50px;
-
+	padding: 10px 0 30px 0;	
 }
 
 .contenedor-footer{
@@ -166,12 +231,11 @@ footer{
 	padding-bottom: 10px;
 	border-bottom: 1px solid white;
 	overflow: hidden;
-
 }
 
 .content-foot{
 	text-align: center;
-
+	margin-bottom: 0px;
 }
 
 .content-foot h4{
@@ -182,23 +246,13 @@ footer{
 }
 
 .content-foot p{
-	color: gray;	
+	color: black;	
 }
 
 .titulo-final{
 	text-align: center;
 	font-size: 24px;
 	margin: 0 0 0 0;
-	color: gray;
+	color: black;
 	overflow: hidden;
-}
-
-@media screen and (max-widt: 900px){
-	header{
-		background-position: center;
-	}
-}
-
-.span ul li{
-	width: 44%;
 }
