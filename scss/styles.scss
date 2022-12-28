@@ -1,0 +1,236 @@
+$color_1: #f1beeb93;
+$color_2: white;
+$color_3: rgb(63, 30, 30);
+$color_4: black;
+$font-family_1: open sans-serif;
+$background-color_1: #fff;
+
+/*barra navegación-header*/
+/*portada*/
+/*página de picadas*/
+/*página de bebidas*/
+/*página de snacks y salsas*/
+/*página de contacto*/
+/*footer*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	background: #f1beeb;
+	font-family: $font-family_1;
+	display: flex;
+	flex-direction: column;
+}
+.contenedor {
+	width: 100%;
+	margin: auto;
+	display: grid;
+	>header {
+		height: 50px;
+		width: 100%;
+		background: #d33878;
+		color: $color_1;
+		grid-column-start: 1;
+		grid-column-end: 5;
+		justify-content: center center;
+	}
+	>main {
+		height: 350px;
+		background: url(../img/PICADA2.webp);
+		background-size: cover;
+		background-attachment: fixed;
+		position: relative;
+		flex-wrap: wrap;
+		grid-column-start: 1;
+		grid-column-end: 5;
+	}
+}
+.navbar {
+	>a {
+		color: $color_2;
+		font-weight: 300;
+		text-decoration: none;
+		margin-right: 10px;
+		display: inline;
+		font-size: 20px;
+		margin-bottom: 0px;
+		justify-content: center;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+.wave {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+main {
+	.textos-header {
+		display: flex;
+		height: 230px;
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		text-align: center;
+		flex-wrap: wrap;
+	}
+}
+.textos-header {
+	h1 {
+		font-size: 50px;
+		color: $color_3;
+		text-shadow: 3px 3px 0 #fff;
+		flex-wrap: wrap;
+		margin-bottom: 0px;
+	}
+	h2 {
+		font-size: 30px;
+		font-weight: 300;
+		color: $color_3;
+		text-shadow: 3px 3px 0 #fff;
+		flex-wrap: wrap;
+		margin-bottom: 0px;
+	}
+}
+.presentación {
+	>p {
+		font-size: 20px;
+		color: $color_4;
+		text-align: center;
+		margin-left: 50px;
+		margin-right: 50px;
+	}
+}
+.contenedor-picadas {
+	position: relative;
+	display: flex;
+	font-size: 15px;
+	height: auto;
+	width: auto;
+}
+.picadas {
+	position: relative;
+	display: flex;
+	height: 40vw;
+	justify-content: center;
+	margin-left: 100px;
+}
+.container {
+	font-size: 20px;
+	align-items: center;
+	margin: 10px;
+	display: flex;
+	height: auto;
+	width: auto;
+}
+.bebidas {
+	position: relative;
+	display: flex;
+	height: 40vw;
+	justify-content: center;
+	margin-left: 100px;
+}
+.card {
+	align-items: flex-start;
+	background-color: $background-color_1;
+	display: flex;
+	height: 50vh;
+	width: 50vh;
+	padding: 2em;
+	border-radius: 3px;
+	margin: 30px;
+	justify-content: center;
+	text-align: center;
+}
+img {
+	height: auto;
+	width: auto;
+	max-height: 150px;
+	max-width: 200px;
+	border-radius: 3px;
+	margin: 10px;
+}
+.snacksysalsas {
+	position: relative;
+	height: 30vw;
+}
+.contenedorsalsas {
+	position: relative;
+	display: flex;
+	font-size: 20px;
+	height: auto;
+	width: auto;
+}
+.box {
+	height: auto;
+	width: auto;
+	align-items: center;
+	text-align: center;
+}
+.form-contact {
+	align-items: center;
+	height: 40vw;
+	margin-left: 300px;
+}
+.contact {
+	background-color: $background-color_1;
+	width: 600px;
+	height: 350px;
+	position: relative;
+	border-style: solid;
+	box-shadow: 7px 13px 37px black;
+	text-align: center;
+	align-content: center;
+	align-items: center;
+}
+input {
+	width: 500px;
+	height: 30px;
+	margin-bottom: 2px;
+}
+textarea {
+	width: 500px;
+	height: 100px;
+}
+footer {
+	margin-top: auto;
+	position: fixed;
+	bottom: 0;
+	background: coral;
+	width: 100%;
+	height: 100px;
+	padding: 10px 0 30px 0;
+}
+.contenedor-footer {
+	display: flex;
+	width: 90%;
+	justify-content: space-evenly;
+	margin: auto;
+	padding-bottom: 10px;
+	border-bottom: 1px solid white;
+	overflow: hidden;
+}
+.content-foot {
+	text-align: center;
+	margin-bottom: 0px;
+	h4 {
+		color: $color_2;
+		border-bottom: 3px solid violet;
+		padding-bottom: 5px;
+		margin-bottom: 10px;
+	}
+	p {
+		color: $color_4;
+	}
+}
+.titulo-final {
+	text-align: center;
+	font-size: 24px;
+	margin: 0 0 0 0;
+	color: $color_4;
+	overflow: hidden;
+}

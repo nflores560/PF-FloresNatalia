@@ -3550,3 +3550,7 @@ node_modules/yargs-parser/build/lib/tokenize-arg-string.js
 node_modules/yargs-parser/build/lib/yargs-parser-types.js
 node_modules/yargs-parser/build/lib/yargs-parser.js
 node_modules/true-case-path/test/fixture/f[u&n%k)y
+scss/prueba.scss
+.gitignore
+scss/colors.scss
+css/prueba css.css
