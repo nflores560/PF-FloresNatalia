@@ -2,27 +2,47 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>El mundo de las picadas</title>
 	<link rel="stylesheet" type="text/css" href="css/estilos.css">
 	<link rel="icon" href="img/images.ico">
-	<link rel="stylesheet" href="scripts.js">
-
 </head>
 <body>
 	<div class="contenedor">
 		<header>
 			<nav class="navbar">
 				<div id="toggle-menu" class="toggle-menu">
-					<img src="./img/icono-menu.png" alt="">
+					<label for="toggle-menu-checkbox">
+						<img src="./img/icono-menu.png" alt="">
+					</label>
 				</div>
-				<a href="index.html">Inicio</a>
-				<a href="pages/picadas.html">Picadas</a>
-				<a href="pages/bebidas.html">Bebidas</a>
-				<a href="pages/snacksysalsas.html">Snacks y salsas</a>
-				<a href="pages/contacto.html">Contacto</a>
+				<input type="checkbox" class="toggle-menu__checkbox" id="toggle-menu-checkbox">
+				<ul id="main-menu" class="main-menu">
+					<li class="main-menu_item">
+						<a href="index.html" class="main-menu_link">Inicio</a>
+					</li>
+				</ul>
+				<ul id="main-menu" class="main-menu">
+					<li class="main-menu_item">
+						<a href="pages/picadas.html" class="main-menu_link">Picadas</a>
+					</li>
+				</ul>
+				<ul id="main-menu" class="main-menu">
+					<li class="main-menu_item">
+						<a href="pages/bebidas.html" class="main-menu_link">Bebidas</a>
+					</li>
+				</ul>
+				<ul id="main-menu" class="main-menu">
+					<li class="main-menu_item">
+						<a href="pages/snacksysalsas.html" class="main-menu_link">Snacks y salsas</a>
+					</li>
+				</ul>
+				<ul id="main-menu" class="main-menu">
+					<li class="main-menu_item">
+						<a href="pages/contacto.html" class="main-menu_link">Contacto</a>
+					</li>
+				</ul>
 			</nav>
-			<script src="scripts.js"></script>
 		</header>
 		<main>
 			<section class="textos-header">
@@ -54,6 +74,6 @@
 			</div>
 			<h5 class="titulo-final">&copy; Natalia Flores</h5>
 		</footer>
-	</div>
+	</div
 </body>
 </html>

@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: content-box;
 }
 
 body {
@@ -12,32 +12,18 @@ body {
 }
 
 .contenedor {
-    width: 100%;
+    width: 100vw;
+	height: 90vh;
     margin: auto;
 	display: grid;
 }
 
 /*barra navegación-header*/
 .contenedor > header{
-	height: 60px;
+	height: 70px;
 	width: 100%;
 	background: #d33878;
 	color: #f1beeb93;
-	grid-column-start: 1;
-	grid-column-end: 5;
-	justify-content: center center;
-}
-
-.navbar{
-	overflow: hidden;
-	background-color: #d33878;
-}
-
-@media screen and (max-width: 768px) {
-	.navbar {
-		background-color: #f1beeb;
-	}
-	
 }
 
 .toggle-menu{
@@ -46,60 +32,78 @@ body {
 	top: 0.5rem;
 	right: 1.5rem;
 	cursor: pointer;
-
+	z-index: 1;
 }
-
 @media screen and (min-width: 768px){
 	.toggle-menu {
 		display: none;
 	}
 }
 
-.navbar > a{
-	float: left;
+.main-menu{
+	list-style: none;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+	overflow: hidden;
+	background-color: #d33878;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	transition: transform 0.3s;
+	transform: translateY(-100%);
+}
+
+.main-menu--show{
+	transform: translateY(0);
+}
+
+.toggle-menu__checkbox{
+	display: none;
+}
+
+.main-menu__checkbox:checked + .main-menu{
+	transform: translateY(0);
+}
+
+@media screen and (min-width: 768px) {
+	.main-menu_link{
+		flex-direction: row;
+		transform: translateY(0);
+	}
+}
+
+.main-menu_item{
+	padding: 1em;
+}
+
+.main-menu_link{
 	color: white;
-	font-weight: 300px;
+	text-transform: uppercase;
 	text-decoration: none;
-	margin-right: 10px;
-	display: block;
-	font-size: 20px;
-	margin-bottom: 0px;
-	justify-content: center;
-	text-align: center;
-	padding: 14px 16px;
-}
-/*responsive*/
-@media screen and (max-width:600px) {
-.navbar a{
-	float: none;
-	width: 100%;
-	flex-direction: column;
-}
 }
 
-
-.navbar > a:hover{
+.main-menu_link:hover{
 	text-decoration: underline;
 }
 
 /*portada*/
 .contenedor > main{
-	height: 300px;
+	height: 40vh;
 	background: url(../img/PICADA2.webp);
-	background-size: cover;
+	background-size: 100vw;
     background-attachment: fixed;
     position: relative;
 	flex-wrap: wrap;
 	grid-column-start: 1;
 	grid-column-end: 5;
-	width: 100%;
+	background-repeat: no-repeat;
 }
-
 
 .wave{
 	position: absolute;
 	bottom: 0;
-	width: 100%;
+	width: 100vw;
 }
 
 main .textos-header{
@@ -119,6 +123,7 @@ main .textos-header{
 	text-shadow: 3px 3px 0 #fff;
 	flex-wrap: wrap;
 	margin-bottom: 0px;
+	
 }
 
 .textos-header h2{
@@ -128,93 +133,88 @@ main .textos-header{
 	text-shadow: 3px 3px 0 #fff;
 	flex-wrap: wrap;
 	margin-bottom: 0px;
+	
 }
 
+.presentación{
+	width: 100vw;
+}
 .presentación > p{
-	font-size: 20px;
+	width: 90vw;
+	font-size: 30px;
 	color: black;
 	text-align: center;
-	margin-top: 30px;
-	margin-left: 50px;
-	margin-right: 50px;
+	height: 80vh;
+	margin: 5vw;
 }
+
 
 /*página de picadas*/
 
 .contenedor-picadas{
 	display: flex;
-	flex-wrap: wrap;
-	height: 40vw;
+	height: 100vh;
 	justify-content: center;
+	padding: 5vw;
+	flex-direction: row;
+	margin-top: 5px;
 }
 
 .card{
 	flex-direction: row;
-	align-items: flex-start;
 	background-color: #fff;
 	display: flex;
-	height: 50vh;
-	width: 30%;
-	padding: 2em;
-	border-radius: 3px;
-	margin: 30px;
+	height: 45vh;
+	width: 25vw;
+	border-radius: 19px;
+	margin: 20px;
 	justify-content: center;
 	text-align: center;
-	width: 30%;
 }
 
 .card{
 	flex: 1;
 }
 
-.card:first-child{
-	flex: 1
-}
-
 .card > div{
-	padding: 10px;	
+	padding: 5px;	
 }
 
+/*pag. picadas responsive*/
+@media screen and (max-width:768px){
+	.contenedor-picadas{
+		display: flex;
+		flex-direction: column;
+	}
+	.card{
+		flex-direction: column;
+		width: 80vw;
+	}
+}
 
 /*página de bebidas*/
 
 .container{
 	display: flex;
-	flex-wrap: wrap;
-	height: 40vw;
+	height: 100vh;
 	justify-content: center;
 	font-size: 20px;
-	align-items: center;
 	margin: 10px;
-	height: auto;
-	width: auto;
+	flex-direction: row;
+	padding: 5vw;
 }
 
 .cardb{
 	flex-direction: row;
-	align-items: flex-start;
 	background-color: #fff;
 	display: flex;
-	height: 50vh;
+	height: 30vh;
 	padding: 2em;
-	border-radius: 3px;
-	margin: 30px;
+	border-radius: 10px;
+	margin: 10px;
 	justify-content: center;
 	text-align: center;
-	width: 30%;
-}
-
-.cardb{
-	flex: 1;
-	min-width: 300px;
-}
-
-.cardb:first-child{
-	flex: 1;
-}
-
-.cardb > div{
-	padding: 10px;
+	width: 20vw;
 }
 
 img{
@@ -226,67 +226,102 @@ img{
 	margin: 10px;
 }
 
+.cardb{
+	flex: 1;
+}
+
+.cardb > div{
+	padding: 5px;	
+}
+
+/*pag. bebidas responsive*/
+@media screen and (max-width:768px){
+	.container{
+		display: flex;
+		flex-direction: column;
+	}
+	.cardb{
+		flex-direction: column;
+		width: 80vw;
+	}
+}
+
+
 /*página de snacks y salsas*/
 
 .snacksysalsas{
-	position: relative;
-	height: 30vw;
+	height: 70vh;
+	display: flex;
+	flex-direction: row;
+	box-sizing: content-box;
+	width: 100vw;
 	justify-content: center;
-	align-items: center;
-	height: 100vh;
+
 }
 
 .box{
-	height: auto;
-	width: auto;
+	height: 40vh;
+	width: 30vw;
 	align-items: center;
 	text-align: center;
 	background-color: #fff;
-	margin: 10px;
 	justify-content: center;
+	border-radius: 20px;
+	border: #d33878 solid;
+	margin: 10px;
 }
 
-.box{
-	flex: 1;
+/*pag. snack y salsas responsive*/
+@media screen and (max-width:768px){
+	.snacksysalsas{
+		display: flex;
+		flex-direction: column;
+	}
+	.box{
+		flex-direction: column;
+		width: 80vw;
+	}
 }
 
-.box:first-child{
-	flex: 1;
-}
-
-.box > div{
-	padding: 10px;
+@media screen and (max-width:1279px){
+	.snacksysalsas{
+		display: flex;
+		flex-direction: column;
+	}
+	.box{
+		flex-direction: column;
+		width: 50vw;
+	}
 }
 
 /*página de contacto*/
 
 .form-contact{
-	align-items: center;
-	height: 40vw;
-	margin-left: 300px;
-
+	height: 100vh;
+	margin: 10vw;
 }
+
 .contact{
 	background-color: #fff;
-	width: 600px;
-	height: 350px;
+	width: 80vw;
+	height: 70vh;
 	position: relative;
 	border-style: solid;
 	box-shadow: 7px 13px 37px black;
 	text-align: center;
 	align-content: center;
-	align-items: center;
+	border-radius: 15px;
 }
 
 input{
-	width: 500px;
-	height: 30px;
+	width: 50vw;
+	height: 5vh;
 	margin-bottom: 2px;
 }
 
 textarea{
-	width: 500px;
-	height: 100px;
+	width: 50vw;
+	height: 15vh;
 }
 
 /*footer*/
@@ -296,8 +331,8 @@ footer{
 	bottom: 0;
 	background: coral;
 	width: 100%;
-	height: 100px;
-	padding: 10px 0 30px 0;	
+	height: 120px;
+	padding: 5px 0 5px 0;	
 }
 
 .contenedor-footer{
@@ -305,7 +340,7 @@ footer{
 	width: 90%;
 	justify-content: space-evenly;
 	margin: auto;
-	padding-bottom: 10px;
+	padding-bottom: 5px;
 	border-bottom: 1px solid white;
 	overflow: hidden;
 }
@@ -318,8 +353,7 @@ footer{
 .content-foot h4{
 	color: white;
 	border-bottom: 3px solid violet;
-	padding-bottom: 5px;
-	margin-bottom: 10px;	
+	margin-bottom: 5px;	
 }
 
 .content-foot p{
@@ -328,7 +362,7 @@ footer{
 
 .titulo-final{
 	text-align: center;
-	font-size: 24px;
+	font-size: 20px;
 	margin: 0 0 0 0;
 	color: black;
 	overflow: hidden;
